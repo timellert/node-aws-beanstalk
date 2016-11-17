@@ -30,11 +30,6 @@ function setup(config, codePackage) {
     TemplateName: config.template,
     CNAMEPrefix: config.CNAMEPrefix,
     GroupName: config.GroupName,
-    Tier: {
-      Name: config.tier || 'WebServer',
-      Type: config.tier === 'Worker' ? 'SQS/HTTP' : 'Standard',
-      Version: '1.0'
-    },
     Tags: config.environmentTags,
     OptionSettings: config.environmentSettings
   };
